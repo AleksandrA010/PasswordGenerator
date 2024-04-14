@@ -71,6 +71,7 @@ namespace PasswordGenerator
         private void checkBoxIsNonLetterChars_CheckedChanged(object sender, EventArgs e)
         {
             isNonLetterChars = !isNonLetterChars;
+
         }
 
         private void checkBoxIsDuplicateChars_CheckedChanged(object sender, EventArgs e)

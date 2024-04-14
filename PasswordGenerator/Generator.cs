@@ -14,7 +14,13 @@ namespace PasswordGenerator
 
         public string GeneratePassword(int length, bool isNonLetterChars, bool isDuplicateChars)
         {
-            List<char> currentList = numberChars;
+            List<char> currentList = new List<char>();
+
+            for (int i = 0; i < numberChars.Count; i++)
+            {
+                currentList.Add(numberChars[i]);
+            }
+
             for (int i = 0; i < letterChars.Count; i++)
             {
                 currentList.Add(letterChars[i]);
@@ -43,7 +49,7 @@ namespace PasswordGenerator
                 for (int i = 0; i < length; i++)
                 {
                     char newChar = currentList[rand.Next(0, currentList.Count - 1)];
-                    if (letterChars.Contains(newChar))
+                    if (duplicateChars.Contains(newChar))
                     {
                         result += newChar;
                     }
