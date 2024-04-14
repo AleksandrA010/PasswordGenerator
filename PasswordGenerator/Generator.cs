@@ -31,7 +31,7 @@ namespace PasswordGenerator
                 }
             }
 
-            else if (isDuplicateChars)
+            if (isDuplicateChars)
             {
                 for (int i = 0; i < length; i++)
                 {
